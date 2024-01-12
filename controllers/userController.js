@@ -4,7 +4,7 @@ const pool = require('../config/db');
 const submitForm = async(req,res) => {
     const {firstname, lastname, phonenum, email, Courses, state, interest, event } =  req.body;
 
-    const query = `INSERT INTO College_form (first_name, last_name, number, email, course, state, interest, event) VALUES  ('${firstname}', '${lastname}', '${phonenum}', '${email}', '${Courses}', '${state}','${interest},'${event}')`;
+    const query = `INSERT INTO College_form (first_name, last_name, number, email, course, state, interest, event) VALUES  ('${firstname}', '${lastname}', '${phonenum}', '${email}', '${Courses}', '${state}','${interest}','${event}')`;
 
     try {
         await pool.query(query);
